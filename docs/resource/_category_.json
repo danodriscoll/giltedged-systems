@@ -1,0 +1,8 @@
+{
+  "label": "Resource",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Agent-Based Model Resource"
+  }
+}
