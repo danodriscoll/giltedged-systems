@@ -17,6 +17,6 @@ View a code gist of the [Central Bank](https://gist.github.com/danodriscoll/1421
 <figure>
     ![alt text](@site/static/img/central_bank_policy_meeting.jpeg)
     <figcaption>
-        It's Monday 3rd of June 1822: Tensions run high at the ABMLP-X Central Bank monetary policy committee pre-meeting. For one-hundred and three years the interest rate on bills held at 5 percent. It was time for change. A recommended drop of 100 basis points. Who would inform the Governor?
+        It's Monday 3rd of June 1822: Tensions run high at the ABMLP-X Central Bank monetary policy committee pre-meeting. For one-hundred and three years the interest rate on bills held at 5 percent. With the gold standard recently restored, it was time for change. A recommended drop of 100 basis points. Who would inform the Governor?
     </figcaption>
 </figure>

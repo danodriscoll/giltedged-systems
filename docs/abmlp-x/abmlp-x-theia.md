@@ -4,8 +4,6 @@ sidebar_position: 5
 
 # ABMLP-X Theia
 
-Theia collects model macroeconomic data, moving after both Producer and Household agents.
-
 :::info[**Code Gist**]
 
 View a code gist of the [Theia agent](https://gist.github.com/danodriscoll/adab90fd4539e539923223f6a26210c9) class.
@@ -19,6 +17,4 @@ View a code gist of the [Theia agent](https://gist.github.com/danodriscoll/adab9
     </figcaption>
 </figure>
 
-Theia collects the consumption demands of both Government and Households when computing the national income.
-
-Theia also records that portion of wealth held by Household agents not invested in Government interest-bearing money instruments: Macroeconomic information that will of interest to agents of the (proposed) Asset Manager class.
+Theia computes in model run macroeconomic data. For instance, Theia collects the consumption demands of both Government and Households when computing the national income. Theia also computes information on Government money instruments issued as well as the average wealth of Household agents and the (average) wage paid to them.
