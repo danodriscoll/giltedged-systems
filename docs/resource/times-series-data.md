@@ -8,6 +8,13 @@ sidebar_position: 1
 
 - UK General Government: Final consumption expenditure: CP SA | [ONS](https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/nmrp/).
 - A millennium of macroeconomic time-series data: BoE [Research Datasets](https://www.bankofengland.co.uk/statistics/research-datasets).
+- UK income taxation rates: Institute for Fiscal Studies (IFS) | [IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-key-questions/how-have-government-revenues-changed-over-time)
+- UK corporate taxation rates: Institute for Fiscal Studies (IFS) | [IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-data-item/corporation-tax-rates-over-time)
+- UK interest rates and bank rate | [BoE](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
+
+## Gilt Yields
+
+- UK Long-Term Government Bond Yields: 10-year: Main | [FRED](https://fred.stlouisfed.org/series/IRLTLT01GBM156N)
 
 ### Financial Calendar Year
 
@@ -51,15 +58,3 @@ Second, I understand that the components of UK GGFCE (CPSA) are as follows: Heal
 In terms of the question on GGFCE/Fixed capital Formation, for comparability, we recommend using only the 'General Government Final Consumption Expenditure (Current Prices Seasonally Adjusted)' series for government spending. Although you are correct that there is government investment in 'Total Gross Fixed Capital Formation (Current Prices Seasonally Adjusted)' it would not be correct to simply sum the two series.
 
 For your second query, *Other* would not include interest payments. The public sector debt elements would be covered by financial account transactions which can be found in sector financial accounts (https://www.ons.gov.uk/economy/nationalaccounts/uksectoraccounts/bulletins/quarterlysectoraccounts/apriltojune2023) or in the public sector finances (https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/bulletins/publicsectorfinances/september2023).
-
-## Interest Rates
-
-- UK Interest rates and Bank Rate | [BoE](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)
-
-## Real-World Taxation Rates
-
-- UK Taxation rates: Institute for Fiscal Studies (IFS) | [IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-key-questions/how-have-government-revenues-changed-over-time)
-
-## Gilt Yields
-
-- UK Long-Term Government Bond Yields: 10-year: Main | [FRED](https://fred.stlouisfed.org/series/IRLTLT01GBM156N)
