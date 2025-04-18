@@ -5,6 +5,15 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
+    title: 'GEM Research',
+    Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
+    description: (
+      <>
+        Model & Real-World Analysis: <Link to="/gilt-edged-mini/gem-research">Gilt Edged Mini</Link>
+      </>
+    ),
+  },  
+  {
     title: 'Liquidity Preference-X',
     Svg: require('@site/static/img/english_currency_icon.svg').default,
     description: (
@@ -18,16 +27,7 @@ const FeatureList = [
     Svg: require('@site/static/img/early_model_developments_icon.svg').default,
     description: (
       <>
-        Earlier <Link to="/category/early-models">Money Models</Link>
-      </>
-    ),
-  },
-  {
-    title: 'GEM Resource',
-    Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
-    description: (
-      <>
-        Gilt Portfolio Analysis: <Link to="/category/abmgem-hedge">ABMGEM-HEDGE</Link>
+        Early <Link to="/category/early-models">Money Models</Link>
       </>
     ),
   },

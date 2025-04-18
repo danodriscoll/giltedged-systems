@@ -164,14 +164,19 @@ $CG = \Delta p_{bL} \times BL_{h-1}$ (Equation 5.5)
 
 ```Python showLineNumbers
 """
-Disposable income, if any, includes interest payments on bills and long-term bonds.        
-YDᵣ ≡ Y - T + rb₋₁ * Bₕ₋₁ + BLₕ₋₁ (5.2)        
+Disposable income includes interest payments on bills,
+long-term bonds as well as dividend payments received, if any,
+from Producer agents.
 """
 self.disposable_income = ((self.wage_rate_supplied - tax_to_pay_wage)
                          + (self.interest_from_bills - tax_on_bills_interest)
-                         + (self.interest_from_bonds - tax_on_coupon_revenue))
+                         + (self.interest_from_bonds - tax_on_coupon_revenue)
+                         + (self.business_dividends - tax_on_dividend))
 
 # --- Agent Accounting ---
+
+self.capital_gains = ((government.bond_price - government.bond_price_last_step)
+                     * self.bonds_demanded)
 
 self.wealth = (self.wealth
                + ((self.disposable_income - total_consumption) 
@@ -355,9 +360,11 @@ Each Household agent rates the government (in the current step) by considering t
 ```Python showLineNumbers
 def government_rating(self, other_household_wealth):
     """
+    Real-World:
     Do you approve or disapprove of the Government's record to date?
     See: https://yougov.co.uk/topics/politics/trackers/government-approval
 
+    Model:
     Computes a rating of the government that considers both:
         1. Wealth performance (new high or relative to a peer)
         2. Recent employment history over the past 5 steps.

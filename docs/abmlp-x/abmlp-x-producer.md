@@ -23,7 +23,7 @@ Household agents have attributes which, among others, include `wealth` and `type
 
 Every Producer will seek to employ one unemployed household agent based on its type and past employment history. The selection process prioritises households in the order of *alpha*, then *beta*, and finally *gamma*. Within each type, a weighted random selection is performed where the weight is determined by the household's employment count for that type (plus one). This approach increases the likelihood of selecting households that have been employed more frequently, while still giving those with no prior employment a chance.
 
-### Detailed Process
+### Process
 
 1. Filtering Unemployed Households:
     - The function begins by filtering the model’s household agents to identify those that are currently unemployed. It then categorises these households into three separate lists based on their type (*alpha*, *beta*, or *gamma*).
@@ -89,8 +89,55 @@ The final wage is calculated by multiplying the `amount_supplied` by the determi
 
 The `household_wage_payment` function is designed to offer a nuanced approach to wage progression by considering type-specific employment history. By maintaining separate counts in `self.employment_of_household_count`, it ensures that the wage increase for each household agent is based solely on the experience relevant to their current type (employed by a specific Producer).
 
+## Dividend Payments Made to Households (By Agent Type)
+
+Producer operating profit is simply the difference between the expenditures a Producer will receive, Government demands and Household consumption, and the wages it will subsequently pay to the employed Household agent in the current step. The dividend policy will define a rate according to the employed Household agent's *type*, a rate that is used to calculate the portion of retained earnings to be distributed.
+
+```Python showLineNumbers
+def business_taxation(self):
+    """
+    Apply corporation tax.
+    See https://ifs.org.uk/taxlab/taxlab-data-item/corporation-tax-rates-over-time
+    """
+
+    def corp_taxation_rate(tax_rate=Decimal('25')):
+        # The corporation taxation rate to apply in this step.
+        # 100 == All profits will be taxed away.
+        return tax_rate
+
+    if self.model_current_step <= (self.model_run_steps - self.model_future_steps) - 1:
+        return [Decimal(float(self.model.tax_data['corp_value'].iloc[self.model_current_step]))]
+    else: # Future:
+        return corp_taxation_rate()
+```        
+
+```Python showLineNumbers
+# Operating Profit calculation.
+self.total_revenue = government_revenue_this_step + consumption_revenue_this_step
+self.total_expenses = government_wage_this_step + consumption_wage_this_step
+self.operating_profit = self.total_revenue - self.total_expenses
+
+# --- Net profit and Tax Accounting --
+self.corp_tax_rate = zero_division(self.business_taxation(), 100)
+
+tax_to_pay = self.operating_profit * self.corp_tax_rate
+self.taxation_revenue_supplied += tax_to_pay
+self.taxation_revenue_supplied -= tax_to_pay
+government.taxation_revenue += tax_to_pay
+
+self.net_profit = self.operating_profit - tax_to_pay # Net profit this step.
+# Transfer net profit to retained earnings. (Intercompany transfer from current to capital a/c.)
+self.retained_earnings += self.net_profit
+
+# Distribute a portion of business dividends to the employed household agent.
+yield_rate = zero_division(self.dividend_yield(household.type), 100)        
+dividend_to_distribute = self.retained_earnings * yield_rate            # Dividend amount to distribute.
+self.retained_earnings -= dividend_to_distribute                        # Subtract distributed payment from retained earnings.
+household.business_dividends += dividend_to_distribute                  # Pay dividend to employed household agent.
+```
+
 :::info[**Code Gist**]
 
-View code gists of both the [employment process](https://gist.github.com/danodriscoll/e66b788f3d89553bf6f9247018587f73) and [wage payment](https://gist.github.com/danodriscoll/f4ed80b9fa9fad0c58753de87ee20879) functions.
+View code gists of the Producer [employment process](https://gist.github.com/danodriscoll/e66b788f3d89553bf6f9247018587f73), [wage payment](https://gist.github.com/danodriscoll/f4ed80b9fa9fad0c58753de87ee20879) and [dividend yield](https://gist.github.com/danodriscoll/c8d473d21cd822b2597470d6d89b3b88) functions.
 
 :::

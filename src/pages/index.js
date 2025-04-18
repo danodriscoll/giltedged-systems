@@ -10,8 +10,11 @@ import styles from './index.module.css';
 function HomepageText() {
   return (
     <div className="container margin-top--md">
+      <h2>
+        Models
+      </h2>
       <p>
-        Descriptions of <Link to="/category/abmlp-x">ABMLP-X</Link> agent attributes and behaviours may change at any time. Models employ the <Link to="https://mesa.readthedocs.io/stable/">Mesa</Link> agent-based modelling (ABM) framework written in <Link to="https://www.python.org/">Python</Link>. View a summary technical <Link to="https://www.data-reports.net/giltedged-info/studio-sketch/architecture.html">architecture</Link>. Peruse the <Link to="/category/early-models">early models</Link>. <span className="text--italic">Part of <Link to="https://www.giltedged.info">GiltEdged.info</Link>.</span>
+        Models employ the <Link to="https://mesa.readthedocs.io/stable/">Mesa</Link> agent-based modelling (ABM) framework written in <Link to="https://www.python.org/">Python</Link>. Descriptions of agent attributes and behaviours may change at any time. View the <Link to="/category/abmlp-x">latest model</Link> as well as the <Link to="/category/early-models">early models</Link>. See a brief technical <Link to="https://www.data-reports.net/giltedged-info/studio-sketch/architecture.html">architecture</Link>.
       </p>
     </div>
   );

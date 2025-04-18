@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gilt Edged Systems',
-  tagline: 'Agent-Based Government Money Model Development',
+  tagline: 'Agent-Based Government Money Models & Research',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -107,7 +107,7 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'modelSidebar',
             position: 'left',
-            label: 'Models',
+            label: 'Research Models',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
