@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gilt Edged Systems',
-  tagline: 'Agent-Based Government Money Models & Research',
+  tagline: 'Agent-Based Monetary System Models',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -28,7 +28,6 @@ const config = {
   projectName: 'giltedged-systems', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -50,22 +49,27 @@ const config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
-        blog: false, // Disable the blog plugin
-        // blog: {
-        //   showReadingTime: false,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        // },
+        // blog: false, // Disable the blog plugin
+        blog: {
+          showReadingTime: false,
+          feedOptions: {
+            type: ['rss', 'atom'],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // Useful options to enforce blogging best practices
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
+          blogTitle: 'GEM Blog',
+          blogDescription: 'GEM Model Output',
+          postsPerPage: 'ALL',
+          blogSidebarCount: 5,
+          blogSidebarTitle: 'Latest Model Outputs',
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -107,9 +111,9 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'modelSidebar',
             position: 'left',
-            label: 'Research Models',
+            label: 'GEM Overview & Models',
           },
-          // {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/blog', label: 'Blog', position: 'left'},
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
           {
             href: 'https://www.giltedged.info/',
@@ -125,43 +129,6 @@ const config = {
       },
       footer: {
         style: 'dark',
-        // links: [
-        //   {
-        //     title: 'Agent Models',
-        //     items: [
-        //       {
-        //         label: 'ABMLP-X',
-        //         to: '/abmlp-x/agents',
-        //       },              
-        //       {
-        //         label: 'Early Models',
-        //         to: '/category/early-models',
-        //       },
-        //       {
-        //         label: 'ABMLP-XE',
-        //         to: '/abmlp-xe/agent',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: 'UK Perspective',
-        //     items: [
-        //       {
-        //         label: 'Modern Turn',
-        //         to: '/uk-static-perspective/modern-turn',
-        //       },
-        //     ],
-        //   },
-        //   {
-        //     title: 'More',
-        //     items: [
-        //       {
-        //         label: 'Blog',
-        //         to: '/blog',
-        //       },
-        //     ],
-        //   },
-        // ],
         copyright: `Copyright © ${new Date().getFullYear()} GiltEdged.info.`,
       },
       prism: {

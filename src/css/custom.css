@@ -35,6 +35,12 @@
   clear: left;
 }
 
+figure {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+}
+
 figcaption {
   color: grey
 }

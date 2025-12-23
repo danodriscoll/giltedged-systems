@@ -5,20 +5,11 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'GEM Research',
-    Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
-    description: (
-      <>
-        Model & Real-World Analysis: <Link to="/gilt-edged-mini/gem-research">Gilt Edged Mini</Link>
-      </>
-    ),
-  },  
-  {
     title: 'Liquidity Preference-X',
     Svg: require('@site/static/img/english_currency_icon.svg').default,
     description: (
       <>
-        Latest Government Money Model: <Link to="/category/abmlp-x">ABMLP-X</Link>
+        The latest government money model: <Link to="/category/abmlp-x-structure">ABMLP-X</Link>
       </>
     ),
   },
@@ -27,7 +18,16 @@ const FeatureList = [
     Svg: require('@site/static/img/early_model_developments_icon.svg').default,
     description: (
       <>
-        Early <Link to="/category/early-models">Money Models</Link>
+        Early <Link to="/category/early-models">money models</Link>
+      </>
+    ),
+  },
+  {
+    title: 'Model & Analysis Outputs',
+    Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
+    description: (
+      <>
+        View model scenario <Link to="/blog">run outputs</Link>
       </>
     ),
   },

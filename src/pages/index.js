@@ -11,10 +11,15 @@ function HomepageText() {
   return (
     <div className="container margin-top--md">
       <h2>
-        Models
+        Gilt-Edged Mini (GEM) Models
       </h2>
+
       <p>
-        Models employ the <Link to="https://mesa.readthedocs.io/stable/">Mesa</Link> agent-based modelling (ABM) framework written in <Link to="https://www.python.org/">Python</Link>. Descriptions of agent attributes and behaviours may change at any time. View the <Link to="/category/abmlp-x">latest model</Link> as well as the <Link to="/category/early-models">early models</Link>. See a brief technical <Link to="https://www.data-reports.net/giltedged-info/studio-sketch/architecture.html">architecture</Link>.
+        Read an overview of project <Link to="/gilt-edged-mini/gem-overview">GEM</Link>. The{' '}
+        <Link to="/category/abmlp-x-structure">latest model</Link> is written in the{' '}
+        <Link to="https://www.python.org/">Python</Link> programming language using the project{' '}
+        <Link to="https://mesa.readthedocs.io/stable/">Mesa</Link> framework. Model structures may
+        change at any time.
       </p>
     </div>
   );
