@@ -14,8 +14,7 @@ sidebar_position: 1
 
 ### Government Expenditures, Taxation & Interest Rates
 
-* UK General Government: Final consumption expenditure: CP SA | \[[ONS](https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/nmrp/)\].  
-* Public sector net borrowing, excluding public sector banks (Fiscal Balance): \[[ONS](https://www.ons.gov.uk/economy/governmentpublicsectorandtaxes/publicsectorfinance/timeseries/dzls/pusf)\]  
+* UK General Government: Final consumption expenditure: CVM SA | \[[ONS](https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/nmry/qna)\].
 * A millennium of macroeconomic time-series data: BoE [Research Datasets](https://www.bankofengland.co.uk/statistics/research-datasets).  
 * UK income taxation rates: Institute for Fiscal Studies (IFS) | \[[IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-key-questions/how-have-government-revenues-changed-over-time)\]  
 * UK Corporate taxation rates: Institute for Fiscal Studies (IFS) | \[[IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-data-item/corporation-tax-rates-over-time)\]  
