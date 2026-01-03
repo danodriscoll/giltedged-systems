@@ -20,20 +20,20 @@ Model accounting is based principally, but not only, on the sectoral accounting 
 
 Agent-based model *liquidity preference \- extended* (ABMLP-X) is a system populated by distinct agents each with its own *brain* (logic), its own behaviours (goals) and its own balance sheet. The behaviour of the model economy is the result of the interactions between agents as they pursue their own objectives. ABMLP-X supplements the minimum of class agents with the addition of a public debt management office, a commercial (private) bank, a credit agency and a financial asset fund manager.
 
-ABMLP-X has data instruments (*json data objects*) not described by G\&L. For instance, long-term bonds in G\&L's *liquidity preference* model represent perpetuities (consols) that are never redeemed. In a simple behavioural relationship between the government and household sector, whatever bonds are demanded by households are supplied by the government. ABMLP-X, however, has a debt management office which is mandated to create (and issue) long-term government bond and treasury bill instruments in an amount sufficient to cover the government's fiscal balance (deficit). Bonds and t-bills are bought by, and subsequently sold by, the private bank \- the model's primary dealer. Should the private bank fail to purchase all of the instruments issued in the step, the central bank acts as the buyer of last resort, purchasing all unsold debt instruments.
+ABMLP-X has instruments (*json data objects*) not described by G\&L. For instance, long-term bonds in G\&L's *liquidity preference* model represent perpetuities (consols) that are never redeemed. In a simple behavioural relationship between the government and household sector, whatever bonds are demanded by households are supplied by the government. ABMLP-X, however, has a debt management office which is mandated to create (and issue) long-term government bond and treasury bill instruments in an amount sufficient to cover the government's fiscal balance (deficit). Bonds and t-bills are bought by, and subsequently sold by, the private bank \- the model's primary dealer. Should the private bank fail to purchase all of the instruments issued in the step, the central bank acts as the buyer of last resort, purchasing all unsold debt instruments.
 
 ## Calibration & Data Inputs
 
-One reason agent-based models are useful for simulating complex systems is because they can ingest real world inputs. ABMLP-X consumes [parameters](https://gist.github.com/danodriscoll/19a3c5817871a34fb68cef1e59000c82) (inputs) best described as the *rules of the game*; rules that include, but are not limited to, government *expenditures*[^1], *taxation* and *base* rate time-series data. Agents may react to historical UK[^2] events[^3]; adding an *exogenous* realism to behaviours and output dynamics.
+One reason agent-based models are useful for simulating complex systems is because they can ingest real world inputs. ABMLP-X consumes parameters (inputs) best described as the *rules of the game*; rules that include, but are not limited to, government *expenditures*[^1], *taxation* and *base* rate time-series data. Agents may react to historical UK[^2] events[^3]; adding an *exogenous* realism to behaviours and output dynamics.
 
 ### Model Run Scenarios
 
-* **Historic Mode** (Exogenous Logic): Real-world expenditure and base rate inputs may be imported from the Bank of England's [millennium](https://www.bankofengland.co.uk/statistics/research-datasets) research dataset. The series provides annual economic time-series data from the beginning of 1694 to the end of the financial year 1954\. The millennium series, first exploded into a quarterly financial time-series, and then again into a monthly series, prepends [ONS](https://www.ons.gov.uk/) provided economic time series, itself [exploded](https://www.data-reports.net/giltedged-info/explode_quarterly_values.html) from a quarterly to a monthly series beginning 1955 and ending with the latest available figures.  
-* **Projection Mode** (Endogenous Logic): A model scenario *run* may proceed with model defined parameters only. ONS time-series data is typically one financial quarter behind today's date. A *run* to a date beyond the latest available data is a speculative projection to both present and future.
+* **Historic Mode** (Exogenous Logic): Real-world expenditure and base rate inputs may be imported from the Bank of England's [millennium](https://www.bankofengland.co.uk/statistics/research-datasets) research dataset. The series provides annual economic time-series data from the beginning of 1694 to the end of the financial year 1954\. More typically, a model run scenario will proceed with a wrangled [ONS](https://www.ons.gov.uk/) quarterly time-series [exploded](https://www.data-reports.net/giltedged-info/explode_quarterly_values.html) into a monthly series beginning 1955 and ending with the latest available figures.
+* **Projection Mode** (Endogenous Logic): A model scenario *run* may proceed beyond the latest ONS available data. ONS time-series data is typically one financial quarter behind today’s date. A *run* to a date is a speculative projection to both present and future.
 
 #### Rule Makers
 
-1. Model government fiscal and central bank monetary *projection mode* policy logics. A model *Treasury View* to represent a core component of English statecraft.
+1. Model government fiscal and central bank monetary *projection mode* policy logics.
 
 #### Rule Takers
 
@@ -59,8 +59,8 @@ The central objective is to formulate an effective hedge for a practical portfol
 
 The framework employs a cyclical, three-step methodology:
 
-1. **Model and Policy Interplay**: Refine the strategies \- agent logics[^5] \- that define the interactions between *rule makers* and *rule takers* in the system[^6].  
-2. **Integration with Reality**: Blend the data generated by the ABMLP-X model \- a closed, financialised government money system \- with real-world UK economic time series data.  
+1. **Model and Policy Interplay**: Develop the strategies \- endogenous logics[^5] \- and adjust [parameters](https://gist.github.com/danodriscoll/19a3c5817871a34fb68cef1e59000c82) that define the interactions between *rule makers* and *rule takers* in the system[^6].  
+2. **Integration with Reality**: Blend the data generated by the ABMLP-X model with real-world UK economic time series data.
 3. **Iterative Analysis**: Analyse the combined results, which then informs the continuous refinement of the agent logics and overall understanding in a loop back to the first step.
 
 Model agent descriptions as well as an assortment of *historic* *mode* scenario run outputs are available to all. View a brief technical [architecture](https://www.data-reports.net/giltedged-info/studio-sketch/architecture.html).
@@ -83,7 +83,7 @@ Bank (of England) notes, like bills, had been blessed from the beginning, or ver
 [^2]: The United Kingdom of Great Britain and Northern Ireland (UK)
 [^3]: Real-World financial crises, wars and pandemic(s).
 [^4]:  Mayer, Charles-Joseph, 1751-approximately 1825\. “Des États Généraux Et Autres Assemblées Nationales ..”.
-[^5]: An imagination for examining macroeconomic policies applied by the government and central bank (actions), as well as the financial behaviour of households and the fund manager (reactions). Actions include a model Treasury View to represent a core component of English statecraft.
+[^5]: An imagination for examining macroeconomic policies applied by the government and central bank (actions), as well as the financial behaviour of households and the fund manager (reactions). Logics include a model **Treasury View** to represent a core component of English statecraft.
 [^6]:  This is a highly-simplified interpretation of the institutional and accounting arrangements as they currently exist. However, analysis may also explore the production of collateral in a system yet to exist in the real-world, that is, what the UK system might evolve to be. For instance: *Centralised Cryptocurrency Regime*: Explore state collateral production within the framework and accounting of a digital asset (cryptocurrency) reserve (fund) held within the formal government money system. *Decentralised Bank Deposit Money Regime*: Explore state collateral production within the framework and accounting of a new population of \- state regulated \- commercial (private) banks that are distributed around a highly-simplified UK [geo-region](https://mesa-geo.readthedocs.io/latest/tutorials/intro_tutorial.html) model space (districts). The banks service the productive borrowing requirements of local firms \- and only the productive borrowing requirements of firms \- organised as [sub-agents](https://mesa.readthedocs.io/latest/examples/advanced/alliance_formation.html) of a new geographically distributed agent population of Guilds, themselves sub-agents of a Local Authority agent class.
 [^7]: Desan, [Making Money](https://www.giltedged.info/reading#english-monetary-history), p. 22
 [^8]: p. 69
