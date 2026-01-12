@@ -23,11 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Model & Analysis Outputs',
+    title: 'Model Development & Outputs',
     Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
     description: (
       <>
-        View model scenario <Link to="/blog">run outputs</Link>
+        Visit the GEM <Link to="https://substack.com/@danodriscoll">substack</Link> platform
       </>
     ),
   },
