@@ -12,17 +12,23 @@ sidebar_position: 1
 
 ## Time-Series Data
 
-### Government Expenditures, Taxation & Interest Rates
+Visit the [ONS](https://www.ons.gov.uk/).
 
-* UK General Government: Final consumption expenditure: CVM SA | \[[ONS](https://www.ons.gov.uk/economy/grossdomesticproductgdp/timeseries/nmry/qna)\].
-* A millennium of macroeconomic time-series data: BoE [Research Datasets](https://www.bankofengland.co.uk/statistics/research-datasets).  
-* UK income taxation rates: Institute for Fiscal Studies (IFS) | \[[IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-key-questions/how-have-government-revenues-changed-over-time)\]  
-* UK Corporate taxation rates: Institute for Fiscal Studies (IFS) | \[[IFS Tax Lab](https://ifs.org.uk/taxlab/taxlab-data-item/corporation-tax-rates-over-time)\]  
-* UK Interest rates and Bank Rate | \[[BoE](https://www.bankofengland.co.uk/monetary-policy/the-interest-rate-bank-rate)\]
+- The Real Series (Inputs)
+    - Real Consumption (SA)
 
-### Gilt Yields
+- The Nominal Series (Expenditure)
+    - Total Managed Expenditure
+    - Nominal Consumption
+    - Nominal Investment
+    - Nominal Debt Interest
 
-* UK Long-Term Government Bond Yields: 10-year: Main | \[[FRED](https://fred.stlouisfed.org/series/IRLTLT01GBM156N)\]
+- The Nominal Series (Revenue)
+    - Public Sector Current Receipts (Tax)
+
+- Utilities
+    - GDP Deflator
+    - Population
 
 ### Financial Calendar Year
 
@@ -41,7 +47,3 @@ It's important to note that while the ONS uses calendar quarters for economic re
 * Q2: July to September  
 * Q3: October to December  
 * Q4: January to March
-
-### From Quarterly to Monthly Expenditure Time-Series
-
-To match the monthly (base) rates offered by the Central Bank, ONS provided quarterly Government expenditure time-series are [exploded](https://www.data-reports.net/giltedged-info/explode_quarterly_values.html) into a monthly data series.

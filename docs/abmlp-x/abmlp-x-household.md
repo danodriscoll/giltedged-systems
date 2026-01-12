@@ -13,7 +13,7 @@ A behaviourally rich agent, household actions are nuanced and (wealth) profile-d
 <figure>
     ![alt text](https://www.data-reports.net/giltedged-info/model-images/abmlp-x-household-employment-day-shift.png)
     <figcaption>
-        Employed households from all wealth profiles go about their paid employment tasks [night](https://www.data-reports.net/giltedged-info/model-gallery/abmlp-x-household-employment-night-shift.html) and [day](https://www.data-reports.net/giltedged-info/model-gallery/abmlp-x-household-employment-day-shift.html).
+        Employed households from all wealth profiles go about their paid employment tasks [day](https://www.data-reports.net/giltedged-info/model-gallery/abmlp-x-household-employment-day-shift.html) and [night](https://www.data-reports.net/giltedged-info/model-gallery/abmlp-x-household-employment-night-shift.html).
     </figcaption>
 </figure>
 

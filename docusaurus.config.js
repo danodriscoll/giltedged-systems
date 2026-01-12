@@ -49,27 +49,27 @@ const config = {
           remarkPlugins: [remarkMath],
           rehypePlugins: [rehypeKatex],
         },
-        // blog: false, // Disable the blog plugin
-        blog: {
-          showReadingTime: false,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          // editUrl:
-          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-          blogTitle: 'GEM Blog',
-          blogDescription: 'GEM Model Output',
-          postsPerPage: 'ALL',
-          blogSidebarCount: 5,
-          blogSidebarTitle: 'Latest Model Outputs',
-        },
+        blog: false, // Disable the blog plugin
+        // blog: {
+        //   showReadingTime: false,
+        //   feedOptions: {
+        //     type: ['rss', 'atom'],
+        //     xslt: true,
+        //   },
+        //   // Please change this to your repo.
+        //   // Remove this to remove the "edit this page" links.
+        //   // editUrl:
+        //   //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+        //   // Useful options to enforce blogging best practices
+        //   onInlineTags: 'warn',
+        //   onInlineAuthors: 'warn',
+        //   onUntruncatedBlogPosts: 'warn',
+        //   blogTitle: 'GEM Blog',
+        //   blogDescription: 'GEM Model Output',
+        //   postsPerPage: 'ALL',
+        //   blogSidebarCount: 5,
+        //   blogSidebarTitle: 'Latest Model Outputs',
+        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -113,8 +113,13 @@ const config = {
             position: 'left',
             label: 'GEM Overview & Models',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {to: '/blog', label: 'Blog', position: 'left'},
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
+          {
+            href: 'https://substack.com/@danodriscoll',
+            label: 'Substack',
+            position: 'right',
+          },
           {
             href: 'https://www.giltedged.info/',
             label: 'GiltEdged Info',
