@@ -12,7 +12,7 @@ sidebar_position: 1
 
 ## Time-Series Data
 
-Visit the [ONS](https://www.ons.gov.uk/).
+Visit the [ONS](https://www.ons.gov.uk/). ONS series IDs may change at any time.
 
 - The Real Series (Inputs)
     - Real Consumption (SA)

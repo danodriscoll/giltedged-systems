@@ -23,11 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Model Development & Outputs',
+    title: 'GEM Notes & Outputs',
     Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
     description: (
       <>
-        Visit the GEM <Link to="https://substack.com/@danodriscoll">substack</Link> platform
+        Visit <Link to="https://www.giltedged.info">GiltEdged.info</Link>
       </>
     ),
   },

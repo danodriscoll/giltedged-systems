@@ -115,14 +115,10 @@ const config = {
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
+          {to: '/reading', label: 'Reading', position: 'right'},
           {
-            href: 'https://substack.com/@danodriscoll',
-            label: 'Substack',
-            position: 'right',
-          },
-          {
-            href: 'https://www.giltedged.info/',
-            label: 'GiltEdged Info',
+            href: 'https://www.giltedged.info',
+            label: 'GiltEdged.info',
             position: 'right',
           },
         ],
@@ -134,7 +130,7 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `Copyright © ${new Date().getFullYear()} GiltEdged.info.`,
+        copyright: `Copyright © ${new Date().getFullYear()} GiltEdged.systems`,
       },
       prism: {
         theme: prismThemes.github,

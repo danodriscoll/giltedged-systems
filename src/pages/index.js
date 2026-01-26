@@ -9,17 +9,17 @@ import styles from './index.module.css';
 
 function HomepageText() {
   return (
-    <div className="container margin-top--md">
+    <div className={clsx('container margin-top--md', styles.intro)}>
       <h2>
-        Gilt-Edged Mini (GEM) Models
+        Gilt-Edged Mini (GEM)
       </h2>
+      <p>
+        Gilt Edged Mini (GEM) is a learning-by-building project exploring the history and dynamics of government monetary systems
+        through agent-based models.
+      </p>
 
       <p>
-        Read an overview of project <Link to="/gilt-edged-mini/gem-overview">GEM</Link>. The{' '}
-        <Link to="/category/abmlp-x-structure">latest model</Link> is written in the{' '}
-        <Link to="https://www.python.org/">Python</Link> programming language using the project{' '}
-        <Link to="https://mesa.readthedocs.io/stable/">Mesa</Link> framework. Model structures may
-        change at any time.
+        Read the <Link to="/story">backstory</Link> or explore the <Link to="/gilt-edged-mini/gem-overview">GEM overview</Link>.
       </p>
     </div>
   );

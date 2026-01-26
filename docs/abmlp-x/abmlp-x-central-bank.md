@@ -8,7 +8,7 @@ The central bank is the monetary policy authority, constantly balancing its comp
 
 Once a model run scenario enters *projection mode*, the central bank *endogenous* logic will take over. Endogenous logic settles into a complex hierarchy of priorities:
 
-* Financial Stability: Its first and most important job is to prevent a market panic. The central bank monitors long-term bond yields for signs of financial crisis, that is, a sudden, sharp spike in bond yields). The Bank, if it detects a crisis, will abandon all other goals and immediately act to stabilise the market by holding or decreasing the interest (base) rate under its control.
+* Financial Stability: Its first and most important job is to prevent a market panic. The central bank monitors long-term bond yields for signs of financial crisis, that is, a sudden, sharp spike in bond yields. The Bank, if it detects a crisis, will abandon all other goals and immediately act to stabilise the market by holding or decreasing the interest (base) rate under its control.
 
 * Inflation Targeting: If the bond market is stable, it looks at its *primary mandate*: inflation (price stability). It also looks at low-income wage growth as a *confirming signal*. If both inflation and wage growth are *hot* it will be more aggressive in raising interest rates.
 
@@ -19,9 +19,9 @@ if average_wage_growth > wage_growth_target:
 
 * Employment: If inflation is on target, it uses its *secondary mandate* to fine-tune the economy. The central bank will now look at the overall unemployment rate, decreasing the base rate if unemployment is high and raising it if the labour market is *too tight*.
 
-The central bank, being *history-aware*, knows that the monetary system itself has evolved. It may begin to pay interest on central bank held reserves \- reserves held by the private bank \- once the model clock has reached and passed a *floor system start step*, which will correspond to the 2008 financial crisis. The central bank payment of interest creates a new income stream for the private bank and a new expense for itself.
+The central bank, being *history-aware*, knows that the monetary system itself has evolved. It may begin to pay interest on central bank held reserves \- reserves held by the private bank \- once the model clock has reached and passed a *floor system start step*. The central bank payment of interest creates a new income stream for the private bank and a new expense for itself.
 
-Last, but by no means least, the central bank acts as the buyer of last resort. An entity that will not only be the ultimate backstop for the government, that is, it will purchase any government issued debt (long-term bonds and treasury bills) not been absorbed by the *primary dealer* (private bank), but will also act to restore the solvency of the private bank itself, should that become necessary.
+Last, but by no means least, the central bank acts as the buyer of last resort. An entity that will not only be the ultimate backstop for the government, that is, it will purchase any government issued debt (long-term bonds and treasury bills) not absorbed by the *primary dealer* (private bank), but will also act to restore the solvency of the private bank itself, should that become necessary.
 
 ```Python showLineNumbers title="clear_market"
 def clear_market(self):

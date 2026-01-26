@@ -1,0 +1,117 @@
+---
+title: GEM Overview
+description: A brief overview of Gilt Edged Mini, aka, project GEM.
+sidebar_position: 1
+---
+
+import Link from '@docusaurus/Link';
+import styles from '../../src/pages/index.module.css';
+
+## Model Development
+
+The latest model is a highly simplified computational (agent-based) representation of a closed, financialised, government monetary system with similarities to the English monetary system born in the [modern](#modern-turn) turn. A model shaped by my nascent comprehension of the wonderful books, papers and articles I have been [reading](/reading). The model generates macroeconomic and agent-level behaviours and outcomes not easily observed or available in real-world data series.
+
+## Model Evolution
+
+Model accounting is based principally, but not only, on the sectoral accounting systems presented by Wynne Godley and Marc Lavoie (G\&L) in their book [Monetary Economics](/reading). Incrementally sophisticated agent-based models (ABMs) include model *simple* (ABMSIM), *portfolio choice* (ABMPC) and *liquidity preference* (ABMLP). ABMLP is a system in which perpetuities (consols) are never redeemed. In a simple behavioural relationship between the government and household sector, whatever bonds are demanded by households are supplied by the government. All models are structured with a minimum of class agents conceptually categorised as *rule makers*; the government and central bank and *rule takers*; firms and households who behave accordingly.
+
+Agent-based model *liquidity preference \- extended* (ABMLP-X) is a system that supplements the minimum of class agents described by earlier models with the addition of a public debt management office (DMO), a commercial (private) bank and a financial asset fund manager. Each agent has its own *brain* (logic), its own behaviours (goals) and its own balance sheet. The behaviour of the model economy is the result of the interactions between agents as they pursue their own objectives.
+
+### A Brief Circuit Summary
+
+The consolidated government sets the rules; sets the budget and makes demands. The latest model, ABMLP-X, has data structures that are not described by G\&L. That is, ABMLP-X defines government debt instruments \- long-term government bonds and treasury bills \- as *json data [objects](https://en.wikipedia.org/wiki/Object_\(computer_science\))*. In every step the government calculates its *fiscal balance*, the difference between its spending and income. If in *deficit*, the DMO is delivered a mandate to create and issue an amount of debt instrument objects sufficient to cover the deficit. Bonds and t-bills are bought by, and subsequently sold by, the private bank \- the model's primary dealer. If the private bank should fail to purchase all of the instruments issued in the step, the central bank acts as the buyer of last resort, purchasing all unsold debt instruments.
+
+Firms hire and fire households. Households work, pay tax, invest financial wealth and consume. Households possess sophisticated investment decision-making logic. If satisfied with the recent trajectory of their total wealth, wealthier households of either an *established* or *high net worth* profile may, in consultation with the fund manager, choose to apply for a speculative loan from the private bank in order to increase their investment leverage. This will, for instance, allow them to acquire a larger proportion of the government's interest-bearing money (long-term bonds). Less wealthy households of either an *accumulator* or *precarious* profile may apply for a loan in order to smooth their consumption demands.
+
+## Calibration & Data Inputs
+
+One reason agent-based models are useful for simulating complex systems is because they can ingest real world inputs. ABMLP-X consumes parameters (inputs) best described as the *rules of the game*; rules that include, but are not limited to, government *expenditures*[^1], *taxation* and *base* rate time-series data . Agents may react to events[^2]; adding an *exogenous* realism to behaviours and output dynamics.
+
+### Model Run Scenarios
+
+* **Historic Mode** (Exogenous Logic): Real-world expenditure and base rate inputs may be imported from the Bank of England's [millennium](https://www.bankofengland.co.uk/statistics/research-datasets) research dataset. The series provides annual economic time-series data from the beginning of 1694 to the end of the financial year 1954\. More typically, a model run scenario will proceed with a wrangled [ONS](https://www.ons.gov.uk/) quarterly time-series split into a monthly series beginning 1955 and ending with the latest available figures.  
+* **Projection Mode** (Endogenous Logic): A model scenario *run* may proceed beyond the latest ONS available data. ONS time-series data is typically one financial quarter behind today's date. A *run* beyond the latest available data is a speculative projection to both present and future.
+
+#### Rule Makers
+
+1. Model government fiscal and central bank monetary *projection mode* policy logics.
+
+#### Rule Takers
+
+2. The *historic* and *projection mode* logic and strategies employed by:  
+   1. Firms and households, and   
+   2. the private bank and financial asset (fund) manager.
+
+## To Recap Why GEM Exists
+
+<figure className={styles.quote}>
+   <blockquote>
+      <h4>Reinventing Money</h4>
+      <p>
+         "In 1663, William Killigrew drafted a proposal for Parliament. It claimed to explain '*how this nation may be vast gainers by all the sums of money given to the Crown.*' .. In contrast to the centuries during which it had charged for the money, the (English) government would now pay for the currency it enabled. \- As a conceptual matter, the new system raises an interesting issue, left aside here. It seems that the payment of interest on debt that is later canceled means that the system will never 'clear'. In that sense, there appears to be an inflationary aspect to the modern strategy of liquidity creation, all else equal."
+      </p>
+   </blockquote>
+   <figcaption>
+      DESAN, C. (2015).<cite>Making Money: Coin, Currency, and the Coming of Capitalism. Oxford University Press.</cite>. Oxford University Press. p. 295-296
+   </figcaption>
+</figure>
+
+This project began with a simple motivation: curiosity. Specifically, a curiosity about the history of government monetary systems, the English system in particular. Rather than consuming information passively, this project focuses on learning by constructing agent-based (computational) models. The project is intentionally rooted in learning for learning's sake. The primary goal is to understand, experiment, and reflect \- not to optimise for either popularity or institutional approval.
+
+### Sausage Factory
+
+> "*The state has become a collateral factory for modern financial systems.*"
+> 
+> Supposedly said by financial economist Alberto Giovannini
+
+While much attention is given to the decision-making and expectations of *rule makers* versus *rule takers*, there appears to be a lesser appreciation for the system's core dynamics. The model is a simple system designed to show feedback loops, stocks, flows, and time delays \- specifically, how lagged system dynamics alone affect yields and prices in periods when agent expectations lack consensus.
+
+Though GEM is open‑ended by design \- there is no fixed *end goal* for the evolution of any particular agent \- the development of the model's financial asset *fund manager* (FM) strategy[^3] is of particular interest.
+
+#### A Cyclical Analytical Framework for Model & Strategy Enhancement
+
+The framework employs a cyclical, three-step methodology:
+
+1. **Model and Policy Interplay**: Develop the logics of both *rule makers* and *takers*. Adjust [parameters](https://danodriscoll.github.io/model-run-parameters/model_params.txt) that define the interactions between agents in the system.
+2. **Integration with Reality**: Blend the output generated by ABMLP-X with real-world economic and financial markets time series data.  
+3. **Iterative Analysis**: Analyse the combined results, which then informs the continuous refinement of agent logics and overall understanding in a loop back to the first step.
+
+#### Architecture
+
+The [latest model](/category/abmlp-x-structure) is written in the [Python](https://www.python.org/) programming language using the project [Mesa](https://mesa.readthedocs.io/stable/) framework. Model structures may change at any time. View a brief technical [architecture](https://www.data-reports.net/giltedged-info/studio-sketch/architecture.html) as well the public [notes and outputs](https://www.giltedged.info/).
+
+### A La Carte
+
+<figure className={styles.quote}>
+   <blockquote>
+      <p>
+      ... the world&apos;s problems of which are serious will not be solved by market forces alone or even principally by them.
+      Something else has to be done.
+      </p>
+   </blockquote>
+   <figcaption>
+      Wynne Godley, <cite>Interview on the life and work of Wynne Godley</cite>. Filmed in May 2008 by Alan Macfarlane and edited
+      by Sarah Harrison. Apollo - University of Cambridge Repository. <Link to="http://www.dspace.cam.ac.uk/handle/1810/198374" target="_blank" rel="noreferrer">Video</Link> Part 2, [01:03:10 - 01:03:30].
+   </figcaption>
+</figure>
+
+The interview concluded shortly after Wynne Godley made his thought-provoking statement, meaning he unfortunately never spoke in this interview on what *else has to be done*.
+
+The latest model strives to be a highly-simplified interpretation of the current institutional and accounting arrangements of the English government money system. Generic term-defined money instruments are issued at interest. Whatever *might* *be done* in the future might benefit from a system that has evolved beyond the conventional issuance of a generic monetary instrument.
+
+A new(ish) [system](/abmlp-xe/abmlp-xe-overview) of *theme-based* money instruments issued at interest is speculated. Feel free to [get in touch](mailto:info@giltedged.info).
+
+## Modern Turn {#modern-turn}
+
+When the visibility of money as a political project faded, the way it had realigned the societies that authored it also disappeared from view. With that disappearance went compelling questions about the consequences of the transformation \- including the role of fiscal action in supporting the value of money[^4].
+
+Reconsidering its creation story suggests that "making money" is a constitutional project. In mediaeval England, silver and gold were only the beginning, not the end, of the story. They furnished the material value upon which the mediaeval world would act out a debate over how to package, pay and circulate value. That effort distributed resources. It shaped nation building. It configured new ways to represent counted value – public debt, circulating credit, and elaborate hierarchies of credit are all part of the story, as are markets, banks, securities and financial crises. The way the English made money shaped and reshaped the way people conceptualised it and the way they conducted monetary policy. As a matter engineered on a fiscal frame, enhanced by the unique cash quality it offered, and expanded for a charge, money has never been neutral[^5].
+
+Bank (of England) notes, like bills, had been blessed from the beginning, or very close to it, by a second constitutional contrivance. Both public officials and individual holders cooperated to institutionalise them as a mode of payment by giving them a unique stature in exchange between the government and its citizens. … The stature of the Bank's notes again set them apart from their competitors. Specie was not actually "backing" Bank issues in the sense that redemption was a significant part of the functioning system. According to the numbers in circulation, people held Bank notes rather than demanding specie. … Freed from more laborious work, specie began assuming its modern role. First, it acted, as a kind of security, a default guarantee. If the Bank notes failed as money, people could claim specie as a back-up. Less directly, but more practically, specie was a legitimating device. The Bank's commitment to cash its demand instruments visibly limited the number it could issue. And the image offered of gold or silver in the vault gave those holding paper the sense that an anchor existed – even if the anchor was actually elsewhere, in the sound functioning of the fiscal system[^6].
+
+[^1]:  Expenditures are in proportion to a real-world [population](https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/populationestimates/timeseries/ukpop/pop) estimate and the total number of model household agents.
+[^2]:  Real-World financial crises, wars and pandemic(s).
+[^3]:  The fund manager's strategy is an evolving analysis of the model's historical fiscal and base rate decisions. Real-world events (actual and future imagined) that represent an `active_liquidity_shock` are also appraised, if loaded into the model.
+[^4]:  Desan, [Making Money](https://www.giltedged.info/reading#english-monetary-history), p. 22
+[^5]:  p. 69
+[^6]:  pp. 311-319

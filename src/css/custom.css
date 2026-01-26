@@ -29,12 +29,6 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.theia-figure {
-  width: 60%;
-  float: right;
-  clear: left;
-}
-
 figure {
   width: 100%;
   float: left;

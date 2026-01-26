@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Household Class Agent
 
-A behaviourally rich agent, household actions are nuanced and (wealth) profile-dependent. Households undertake a number of activities in every model step. They strive for paid - wage-bargained - employment, pay tax, make complicated investment decisions and consume.
+Household behaviours are both nuanced and (wealth) profile-dependent. Households undertake a number of activities in every model step. They strive for paid - wage-bargained - employment, pay tax, make complicated investment decisions and consume.
 
 ## Employment in ABMLP-X
 
@@ -131,11 +131,7 @@ Household Agent ID agent\_008: Marginal Tax Return Breakdown
 
 ## Financial Investment Decisions
 
-The logic of household investment, or portfolio management, first requires that each household check if it needs to sell financial assets in order to meet its cash (liquidity) requirements. Second, if the household is of either an *established* or *high net worth* profile, it may \- if happy with the trajectory of its recent wealth \- look for speculative *risk-on* opportunities. This means it will look to invest in firm equity shares \- in an IPO boom \- and will be *bullish* on its government debt instrument investing \- the caveat being that the fund manager itself is saying that it is in a *yield seeking* frame of mind. Additionally, wealthier households that are in the mood to add risk to their portfolio, as opposed to *de-risking* their investments, may also choose to increase their leverage by applying for a *speculative loan* from the private bank. This will allow wealthier households to accumulate a greater amount of government debt instruments compared to less wealthy households who may only apply for a *consumption loan* from the private bank to smooth their consumption needs.
-
-### High-End Investment Future
-
-#### Profile Dependent Investing
+### Profile Dependent Investing
 
 <figure>
     ![alt text](https://www.data-reports.net/giltedged-info/model-images/abmlp-x-high-end-investment.png)
@@ -144,11 +140,13 @@ The logic of household investment, or portfolio management, first requires that 
     </figcaption>
 </figure>
 
+The logic of household investment, or portfolio management, first requires that each household check if it needs to sell financial assets in order to meet its cash (liquidity) requirements. Second, if the household is of either an *established* or *high net worth* profile, it may \- if happy with the trajectory of its recent wealth \- look for speculative *risk-on* opportunities. This means it will look to invest in firm equity shares \- in an IPO boom \- and will be *bullish* on its government debt instrument investing \- the caveat being that the fund manager itself is saying that it is in a *yield seeking* frame of mind. Additionally, wealthier households that are in the mood to add risk to their portfolio, as opposed to *de-risking* their investments, may also choose to increase their leverage by applying for a *speculative loan* from the private bank. This will allow wealthier households to accumulate a greater amount of government debt instruments compared to less wealthy households who may only apply for a *consumption loan* from the private bank to smooth their consumption needs.
+
 Finally, households take their regular, passive savings and invest them according to their now *confidence-adjusted* asset allocation plan.
 
 ## Consumption Spending
 
-Households split their spending, that is, their *profile* sensitive marginal propensity to consume from current income and existing wealth, into two distinct categories, simulating a simple dual economy:
+Households split their spending, that is, their *profile* sensitive marginal propensity to consume from *current income* as well as *existing wealth*, into two distinct categories, simulating a simple dual economy:
 
 1. 60 percent is allocated to *natural monopolies*, the firms initially created as *state-run enterprises* (SREs). This simulates a form of captive spending on services like water, energy and transportation.  
 2. The remaining portion of spending is allocated by way of random selection to firms initially created as *private enterprises* (PEs).

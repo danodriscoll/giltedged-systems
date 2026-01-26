@@ -5,9 +5,7 @@ hide_table_of_contents: true
 
 # Sectoral Balance Sheet
 
-This is a *snapshot* of the model's economy, showing the assets, liabilities, and net worth (equity) of each major sector. In a stock-flow consistent model, this balance sheet must balance to zero.
-
-The fundamental principle is that for every transaction, there is a *use* of funds (a minus sign, \-) and a corresponding *source* of funds (a plus sign, \+). For the system as a whole, every transaction must sum to zero, ensuring no money is created or destroyed unaccountably.
+This is a *snapshot* of the model's economy, showing the assets, liabilities, and net worth (equity) of each sector. The fundamental principle is that for every transaction, there is a *use* of funds (a minus sign, \-) and a corresponding *source* of funds (a plus sign, \+). For the system as a whole, every transaction must sum to zero, ensuring no money is created or destroyed unaccountably.
 
 ## Table Descriptors
 
@@ -34,7 +32,7 @@ The fundamental principle is that for every transaction, there is a *use* of fun
 <summary>Explanations of Financial Instrument (Rows)</summary>
 
 1. Reserves (CB)  
-   1. Definition: These are the electronic, "high-powered" money that commercial banks hold in their own accounts at the Central Bank.  
+   1. Definition: The "high-powered" money that the Private Bank holds in its own account at the Central Bank.
    2. Holders: This is an asset (+A: R) for the Private Bank.  
    3. Issuer: It is the corresponding liability (-L: R) of the Central Bank.  
 2. Cash (Physical)  
