@@ -22,62 +22,21 @@
   justify-content: center;
 }
 
-.intro {
-  max-width: 45%;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--ifm-font-color-base);
-  line-height: 1.65;
-  border-left: 1px solid var(--ifm-color-primary);
-  padding-left: 1.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+.highlightedText {
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: left;
+  width: 100%;
 }
 
-.intro h2 {
-  font-size: clamp(1.6rem, 1.2rem + 1.2vw, 2.2rem);
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-  letter-spacing: 0.01em;
+.highlightedText h2 {
+  margin-top: 0.75rem;
+  text-align: center;
 }
 
-.intro p {
-  margin: 0;
-}
-
-.intro p + p {
-  margin-top: 0.9rem;
-}
-
-.intro a {
-  color: var(--ifm-color-primary);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 2px;
-}
-
-.quote {
-  margin: 1.5rem 0 1.25rem;
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  padding: 1rem 0 0;
-  /* border-top: 1px solid color-mix(in srgb, var(--ifm-color-primary) 35%, transparent); */
-}
-
-.quote blockquote {
-  margin: 0;
-  padding-left: 1rem;
-  border-left: 3px solid var(--ifm-color-primary);
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--ifm-font-color-base);
-}
-
-.quote blockquote p {
-  margin: 0;
-}
-
-.quote figcaption {
-  margin-top: 0.65rem;
-  font-size: 0.9rem;
-  color: var(--ifm-color-content-secondary);
+@media screen and (max-width: 996px) {
+  .highlightedText {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 }

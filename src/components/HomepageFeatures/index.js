@@ -23,11 +23,11 @@ const FeatureList = [
     ),
   },
   {
-    title: 'GEM Notes & Outputs',
+    title: 'GEM Notes & Data Apps',
     Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
     description: (
       <>
-        Visit <Link to="https://www.giltedged.info">GiltEdged.info</Link>
+        Project public  <Link to="https://danodriscoll.github.io/">outputs<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></Link>
       </>
     ),
   },

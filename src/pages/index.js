@@ -9,7 +9,7 @@ import styles from './index.module.css';
 
 function HomepageText() {
   return (
-    <div className={clsx('container margin-top--md', styles.intro)}>
+    <div className={styles.highlightedText}>
       <h2>
         Gilt-Edged Mini (GEM)
       </h2>

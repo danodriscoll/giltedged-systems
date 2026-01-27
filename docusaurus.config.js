@@ -117,9 +117,9 @@ const config = {
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
           {to: '/reading', label: 'Reading', position: 'right'},
           {
-            href: 'https://www.giltedged.info',
-            label: 'GiltEdged.info',
-            position: 'right',
+            href: 'https://danodriscoll.github.io/',
+            label: 'Project Outputs',
+            position: 'right',            
           },
         ],
       },
