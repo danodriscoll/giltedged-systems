@@ -59,4 +59,4 @@ The sum of every single row is zero. This is the fundamental proof that the mode
 
 ## Key Transactions (Flows)
 
-To request a full explanation of the key transactions flows, please send an email to [info@giltedged.info](mailto:info@giltedged.info).
+To request a full explanation of the key transactions flows, please send an email to [daniel@giltedged.systems](mailto:daniel@giltedged.systems).
