@@ -10,23 +10,30 @@
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
+    "deps:check": "yarn outdated",
+    "deps:upgrade:patch-minor": "yarn upgrade",
+    "deps:upgrade:docusaurus": "yarn add -E @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/module-type-aliases@latest @docusaurus/types@latest",
+    "deps:upgrade:react": "yarn add -E react@latest react-dom@latest",
+    "deps:upgrade:interactive": "yarn upgrade-interactive",
+    "verify": "yarn build",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/core": "3.10.0",
+    "@docusaurus/preset-classic": "3.10.0",
+    "@docusaurus/theme-mermaid": "^3.10.0",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "rehype-katex": "7",
     "remark-math": "6"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/types": "3.9.2"
+    "@docusaurus/module-type-aliases": "3.10.0",
+    "@docusaurus/types": "3.10.0"
   },
   "browserslist": {
     "production": [
@@ -42,5 +49,8 @@
   },
   "engines": {
     "node": ">=18.0"
+  },
+  "resolutions": {
+    "webpack": "5.95.0"
   }
 }
