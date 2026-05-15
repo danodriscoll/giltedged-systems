@@ -1,0 +1,8 @@
+{
+  "label": "Zero Rate Regime",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "A simple example of a zero rate t-bill only monetary system."
+  }
+}

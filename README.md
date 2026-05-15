@@ -2,7 +2,7 @@
 
 ## Safer Dependency Upgrade Flow
 
-Use this flow instead of `yarn upgrade --latest` across the whole tree.
+Alternative flow to use instead of `yarn upgrade --latest` across the whole tree.
 
 1. Create a dedicated branch for dependency work.
 2. Check what is out of date:

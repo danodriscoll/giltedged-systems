@@ -4,7 +4,7 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 3rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -27,6 +27,7 @@
   max-width: 700px;
   text-align: left;
   width: 100%;
+  margin-top: 2rem;
 }
 
 .highlightedText h2 {

@@ -5,29 +5,29 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Liquidity Preference-X',
+    title: 'GEM',
     Svg: require('@site/static/img/english_currency_icon.svg').default,
     description: (
       <>
-        The latest government money model: <Link to="/category/abmlp-x-structure">ABMLP-X</Link>
+        Gilt-Edged <Link to="/gilt-edged-models/gem-overview">Models</Link>
       </>
     ),
   },
   {
-    title: 'Simple & Portfolio Choice',
+    title: 'GEA',
     Svg: require('@site/static/img/early_model_developments_icon.svg').default,
     description: (
       <>
-        Early <Link to="/category/early-models">money models</Link>
+        Gilt-Edged <Link to="/gilt-edged-analysis/gea-overview">Analysis</Link>
       </>
     ),
   },
   {
-    title: 'GEM Notes & Data Apps',
+    title: 'Food for Thought',
     Svg: require('@site/static/img/ai_humanoid_icon.svg').default,
     description: (
       <>
-        Project public  <Link to="https://danodriscoll.github.io/">outputs<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></Link>
+        GEM & GEA Public <Link to="https://public.giltedged.systems/">Outputs<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></Link>
       </>
     ),
   },

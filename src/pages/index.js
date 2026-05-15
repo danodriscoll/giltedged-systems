@@ -10,17 +10,13 @@ import styles from './index.module.css';
 function HomepageText() {
   return (
     <div className={styles.highlightedText}>
-      <h2>
-        Gilt-Edged Mini (GEM)
-      </h2>
       <p>
-        Gilt Edged Mini (GEM) is a learning-by-building project exploring the history and dynamics of government monetary systems
-        through agent-based models.
+        Gilt Edged Systems is an evolving research framework for understanding government monetary systems through synthetic operational analysis and agent-based modelling. The focus is not primarily on markets in the classical sense, but on institutional balance-sheet interactions, settlement-constrained flows, and delayed adjustment processes across time.
+      </p>
+      <p>
+        There's a <Link to="/story">backstory</Link> to project development. View <Link to="/gilt-edged-models/gem-overview">GEM</Link> and <Link to="/gilt-edged-analysis/gea-overview">GEA</Link> overviews.
       </p>
 
-      <p>
-        Read the <Link to="/story">backstory</Link> or explore the <Link to="/gilt-edged-mini/gem-overview">GEM overview</Link>.
-      </p>
     </div>
   );
 }

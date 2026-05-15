@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Gilt Edged Systems',
-  tagline: 'Agent-Based Monetary System Models',
+  tagline: 'Monetary System Research & Analysis',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -27,7 +27,7 @@ const config = {
   organizationName: 'danodriscoll', // Usually your GitHub org/user name.
   projectName: 'giltedged-systems', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -36,6 +36,10 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
@@ -50,26 +54,6 @@ const config = {
           rehypePlugins: [rehypeKatex],
         },
         blog: false, // Disable the blog plugin
-        // blog: {
-        //   showReadingTime: false,
-        //   feedOptions: {
-        //     type: ['rss', 'atom'],
-        //     xslt: true,
-        //   },
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   // editUrl:
-        //   //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        //   // Useful options to enforce blogging best practices
-        //   onInlineTags: 'warn',
-        //   onInlineAuthors: 'warn',
-        //   onUntruncatedBlogPosts: 'warn',
-        //   blogTitle: 'GEM Blog',
-        //   blogDescription: 'GEM Model Output',
-        //   postsPerPage: 'ALL',
-        //   blogSidebarCount: 5,
-        //   blogSidebarTitle: 'Latest Model Outputs',
-        // },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -96,7 +80,7 @@ const config = {
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
       image: 'img/development_icon.png',
@@ -108,18 +92,23 @@ const config = {
         },
         items: [
           {
+            to: '/',
+            label: 'Home',
+            position: 'left',
+          },
+          {
             type: 'docSidebar',
             sidebarId: 'modelSidebar',
             position: 'left',
-            label: 'GEM Overview & Models',
+            label: 'Docs',
           },
           // {to: '/blog', label: 'Blog', position: 'left'},
           // {to: '/blog/tags', label: 'Tags', position: 'left'},
           {to: '/reading', label: 'Reading', position: 'right'},
           {
-            href: 'https://danodriscoll.github.io/',
-            label: 'Project Outputs',
-            position: 'right',            
+            href: 'https://public.giltedged.systems/',
+            label: 'Outputs',
+            position: 'right',
           },
         ],
       },
@@ -135,11 +124,6 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        docs: {
-          sidebar: {
-            hideable: true,
-          },
-        },
       },
     }),
 };

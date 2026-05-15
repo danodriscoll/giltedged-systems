@@ -1,5 +1,6 @@
 ---
-sidebar_position: 2
+sidebar_position: 5
+hide_table_of_contents: false
 ---
 
 # ABMPC
@@ -20,7 +21,7 @@ The transactions demand for money and the liquidity preference story may both be
 
 ### Wealth Allocation Function
 
-The ABMPC allocation function *interest\_assets* incorporates an interpretation of G\&L’s Brainard-Tobin formula, slightly amended. ABMPC may run with multiple Producers and Households. In this system, Household agents may face period(s) of unemployment with no knowledge of when they may be employed once again. If unemployed, an agent’s disposable income will fall, leading (probably) to the denominator in the *wealth to income* calculation becoming immediately smaller than the numerator; blowing up G\&L’s interpretation of Brainard-Tobin. Therefore, if unemployed, a Household agent will adjust its allocation of interest-bearing assets to money deposits based on a *wealth to system average income* calculation.
+The ABMPC allocation function `interest_assets` incorporates an interpretation of G\&L’s Brainard-Tobin formula, slightly amended. ABMPC may run with multiple Producers and Households. In this system, Household agents may face period(s) of unemployment with no knowledge of when they may be employed once again. If unemployed, an agent’s disposable income will fall, leading (probably) to the denominator in the *wealth to income* calculation becoming immediately smaller than the numerator; blowing up G\&L’s interpretation of Brainard-Tobin. Therefore, if unemployed, a Household agent will adjust its allocation of interest-bearing assets to money deposits based on a *wealth to system average income* calculation.
 
 ```Python showLineNumbers
 def interest_assets(self, bills_held, bonds_held, central_bank, average_wage):

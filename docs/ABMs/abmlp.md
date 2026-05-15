@@ -1,14 +1,11 @@
 ---
-sidebar_position: 1
+sidebar_position: 4
+hide_table_of_contents: false
 ---
 
 # ABMLP
 
-Agent-Based Model Liquidity Preference (ABMLP) is an interpretation of the second sectoral system described by Wynne Godley and Marc Lavoie (G\&L) in their book *Monetary Economics*. View ABMLP sectoral [accounting](https://docs.google.com/spreadsheets/d/1NcpXHy4gTfRFKzN3JeQgiL39_UO8THEleTs_sAEWOxs/edit?usp=sharing).
-
-## The Investment Portfolio Decision
-
-The base interest rate offered will affect the composition of a Household agent's money asset portfolio. Households now have a third financial asset in which to invest their wealth. The choice of money instrument to invest is based on each Household's bond price expectations and liquidity preferences. An allocation is made between money, T-bills (similar to Treasury bills) and the long-term bonds issued by the government.
+Agent-Based Model Liquidity Preference (ABMLP) is an interpretation of the third sectoral system described by Wynne Godley and Marc Lavoie (G\&L) in their book *Monetary Economics*. View ABMLP sectoral [accounting](https://docs.google.com/spreadsheets/d/1NcpXHy4gTfRFKzN3JeQgiL39_UO8THEleTs_sAEWOxs/edit?usp=sharing).
 
 ## Long-Term Government Bonds
 
@@ -108,6 +105,32 @@ $V = V_{-1} + (YD_r - C) + CG$ (Equation 5.4)
 *with*
 
 $CG = \Delta p_{bL} \times BL_{h-1}$ (Equation 5.5)
+
+## Taxation
+
+### A Brief Comparison of Taxation Theme Extremes: Flat Tax Theme vs Marginal Tax Theme
+
+The following is a simple comparison between two of the taxation themes that may be available within the model. This is a model run test where household agents employ neither *legal avoidance* nor *illegal evasion* strategies. We compare the tax to be returned under both the flat rate and marginal rate themes.
+
+Three example Households: The average wage for all households at model step 6 was: 3625.31:
+
+| Agent ID | Wage Supplied | Flat Rate (37%) Tax Return | Marginal Rate Tax Return |
+| ----- | ----- | ----- | ----- |
+| agent\_005 | 4023.58 | 1488.72 | 1366.38 |
+| agent\_010 | 2438.05 | 902.08 | 375.24 |
+| agent\_008 | 6203.24 | 2295.20 | 2892.14 |
+
+Household Agent ID agent\_008: Marginal Tax Return Breakdown
+
+50 percent of historical average wage amount at step 6: (3625.31 / 2\) \= 1812.65
+
+* **No tax on wage amount up to the first 50%** of the historical average wage amount.  
+* **Tax on wage amount that is between 50% and 100%** of the historical average wage amount (1812.65 \* 60%) \= 1087.59  
+* **Tax on wage amount that exceeds 100%** of the historical average wage amount ((6203.24 \- 3625.31) \* 70%) \= 1804.55
+
+## The Investment Portfolio Decision
+
+The base interest rate offered will affect the composition of a Household agent's money asset portfolio. Households now have a third financial asset in which to invest their wealth. The choice of money instrument to invest is based on each Household's bond price expectations and liquidity preferences. An allocation is made between money, T-bills (similar to Treasury bills) and the long-term bonds issued by the government.
 
 [^1]:  G\&L p.148
 

@@ -12,7 +12,7 @@
     "serve": "docusaurus serve",
     "deps:check": "yarn outdated",
     "deps:upgrade:patch-minor": "yarn upgrade",
-    "deps:upgrade:docusaurus": "yarn add -E @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/module-type-aliases@latest @docusaurus/types@latest",
+    "deps:upgrade:docusaurus": "yarn add -E @docusaurus/core@latest @docusaurus/preset-classic@latest @docusaurus/theme-mermaid@latest @docusaurus/module-type-aliases@latest @docusaurus/types@latest",
     "deps:upgrade:react": "yarn add -E react@latest react-dom@latest",
     "deps:upgrade:interactive": "yarn upgrade-interactive",
     "verify": "yarn build",
@@ -22,7 +22,7 @@
   "dependencies": {
     "@docusaurus/core": "3.10.0",
     "@docusaurus/preset-classic": "3.10.0",
-    "@docusaurus/theme-mermaid": "^3.10.0",
+    "@docusaurus/theme-mermaid": "3.10.0",
     "@mdx-js/react": "^3.1.1",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
